@@ -1,0 +1,74 @@
+Variable,Definition
+Year ,year of the projections
+countyortownName ,name of county or town of residency
+stateAbbrev ,state abbreviation of residency
+stateName ,name of the state of residency
+stateFIPS ,FIPS code of the state of residency
+MSA ,metropolitan statistical area of residency
+CareerPath ,name of the career path
+FamilyType ,family type
+agePerson1 ,age of person 1
+agePerson2,age of person 2
+agePerson3,age of person 3
+agePerson4,age of person 4
+famsize,family size
+numadults,number of adults in the household
+numkids,number of children in the household
+numschoolagekids,number of school age children in the household
+numkidsunder13,number of children under the age of 13 in the household
+FilingStatus,tax filing status (1 - single; 2 - married filing jointly)
+hours,working hours per week
+experience,years of work experience
+empl_healthcare,indicator of access to the health insurance
+healthcare.source ,source of healthcare
+income ,gross (pre-tax) income
+AfterTaxIncome ,after tax income (including tax credits)
+income.aftertax.noTC,after tax income (excluding tax credits)
+SelfSufficiency,self-sufficiency level 
+income.investment,investment income
+totalassets,total assets
+spouse_wage, income of spouse
+value.CCDF,value of Child Care and Development Fund (CCDF) subsidy
+value.HeadStart,value of Head Start 
+value.section8,value of Section 8
+value.liheap,value of Low Income Home Energy Assistance Program (LIHEAP)
+value.snap,value of Supplemental Nutrition Assistance Program (SNAP)
+value.schoolmeals, value of school meals
+value.medicaid.child, value of Medicaid for children
+value.medicaid.adult, value of Medicaid for adults
+value.medicaid, value of Medicaid (adults and children)
+value.aca,value of Affordable Care Act (ACA) subsidy
+value.cdctc,value of Child and Dependent Care Tax Credit (CDCTC)
+value.ctc,value of Child Tax Credit (CTC)
+value.eitc,value of Earned Income Tax Credit (EITC)
+total.transfers,summed value of all public assistance programs received
+ProgramLoss,indicator that family experiences the loss of the program
+NetResources ,family's net resources (income + public assistance Taxes Expenses)
+NetResourcesDisc,discounted value of net resources
+value.employerhealthcare,value of employer health insurance
+exp.childcare ,total childcare expenses
+exp.transportation, total transportation expenses
+exp.food ,total food expenses
+exp.misc, total miscaleneaous expenes
+exp.utilities, total utility expenses
+exp.rentormortgage, total rent or mortgage
+exp.healthcare ,total healthcare expenses
+exp.schoolMeals,total schoolmeals expenses
+exp.healthcare.employer,total employer healthcare expenses (employere and employee)
+premium.employerhealthcare,out-of-pocket premium for the employer based healthcare
+exp.healthcare.healthexchange ,out-of-pocket premium for the health insurance marketplace
+premium.outofpocket ,total out-of-pocket market-based health insurance premium 
+netexp.childcare,net (afer public assistance) childcare expenses
+netexp.rentormortgage ,net (afer public assistance) rent or mortgage
+netexp.utilities ,net (afer public assistance) utility expenses
+netexp.food ,net (afer public assistance) food expenses
+netexp.healthcare, net (afer public assistance) healthcare expenses
+total.expenses ,total expenses
+tax.income.fed ,federal income tax
+tax.FICA ,Federal Insurance Contribution Act (FICA) tax
+tax.federal ,total federal taxes
+tax.income.state ,state income tax
+tax.sales,sales tax
+total.taxes ,total tax liability
+NetTax ,value of net taxes
+NetTaxDisc ,discounted value of net taxes

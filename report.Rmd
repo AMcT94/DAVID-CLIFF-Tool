@@ -1,0 +1,96 @@
+
+## Welcome!  
+
+his dashboard gives you information about which in-demand careers are likely to help you overcome a loss of public assistance and leave you in a better position financially. The dashboard also shows how long it will take to achieve self-sufficiency on a career path.
+
+```{r, echo=FALSE, warning=FALSE}
+library(tibble)
+family_variable <- as_tibble(fam)
+city_variable <- as_tibble(city.name)
+benefits_variable <- as_tibble(ben)
+career_variable <- as_tibble(careerCT)
+career_variable_2 <- as_tibble(careerCT_2)
+sX <- as_tibble(sX) 
+sY <- as_tibble(sY) 
+schooling_months_1X <- as_tibble(schooling_months_1)
+schooling_months_2X <- as_tibble(schooling_months_2)
+```
+  
+The following output is specific to a __`r family_variable$value`__, living in __`r city_variable$value`__. The observed adult works as a __`r career_variable$value`__. In this scenario, the observed adult went to school for __`r sX$value`__ years and __`r schooling_months_1X$value`__ months. This is being compared to the adult working in the career of __`r career_variable_2$value`__, who went to school for __`r sY$value`__ years and __`r schooling_months_2X$value`__ months.  
+
+In this scenario, the single adult and their family receives __`r benefits_variable$value`__.  
+
+  
+ 
+
+## Results  
+
+### PROJECTED PAY ALONG YOUR CAREER PATH
+
+The chart below compares your employment income before taxes for your target career path and a comparison occupation. If the occupation requires training, your income will be low in the beginning of your career path because you are working part-time to make time for school.
+
+```{r plot, fig.height=8.5, fig.width=10.5, echo=FALSE, warning=FALSE}
+plot(Income_Before_Taxes)  
+```
+
+### Self-Sufficiency Target Income
+
+
+You may be wondering when your family will be able to pay for basic expenses without public assistance on the chosen career path ('economic self-sufficiency'). The dashed gray line in the chart below shows the cost of basic expenses ('The Self-Sufficiency Target'). When after-tax family income reaches the amount indicated by the dashed grey line, your family achieves economic self-sufficiency.
+
+Note that the red and gold lines on the chart differ from the same lines in the chart above in two ways: 1) the chart below includes your income plus any income that your family members earn and 2) the chart below shows income minus taxes ('take-home pay').
+
+```{r plot2, fig.height=8.5, fig.width=10.5, echo=FALSE, warning=FALSE}
+plot(Annual_Take_Home_Pay_Self_Sufficiency)     
+```
+
+### What's Included in the Self-Sufficiency Target?
+
+The Self-Sufficiency Target includes seven basic expenses: childcare, food, health insurance, housing, transportation, utilities, and other expenses. These expenses change with time and depend on factors like the number and ages of children, and geographic differences in cost of living.
+
+```{r plot3, fig.height=8.5, fig.width=10.5, echo=FALSE, warning=FALSE}
+plot(Expenses_Breakdown)     
+```
+
+
+
+\newpage
+
+### Public Assistance
+
+The chart below shows the dollar value of public assistance in each year, given family income.  
+```{r plot4, fig.height=8.5, fig.width=10.5, echo=FALSE, warning=FALSE}
+plot(Transfers_Breakdown)         
+``` 
+\newpage 
+
+### How does Public Assistance Eligibility change by Household Income?  
+
+The chart above shows public assistance changes along a specific career path. The chart below shows, in general, how the dollar value and composition of public assistance changes as income increases in $1,000 increments.^1^
+
+```{r plot5, fig.height=8.5, fig.width=10.5, echo=FALSE, warning=FALSE}
+plot(CS_Benefits_Bar)              
+``` 
+
+###### ^1^ Here, we assume an individual is not eligible for health insurance through their employer.  
+
+### Net Financial Resources  
+
+Finally, let's bring it all together. The chart below shows your family's 'net financial resources' over time. Net financial resources are family take-home pay plus public assistance minus self-sufficiency target expenses. When net financial resources are above 0, this means that income and public assistance together provide enough to cover your basic expenses.
+
+If net resources decline, you likely face a benefits cliff. If net resources are flat, you likely face a benefits plateau.
+
+
+
+```{r plot6, fig.height=8.5, fig.width=10.5, echo=FALSE, warning=FALSE}
+plot(Net_Res)              
+``` 
+
+### What is the Financial Tradeoff to Each Career?  
+
+Would you be better off in the target career path instead of the comparison occupation? The chart below shows your short-term (1-3 years), medium-term (1-5 and 1-10 years) and long-term (lifetime) gains or losses when switching from the comparison occupation to the target occupation. The gains and losses shown in the chart reflect the difference in _net financial resources_ between the two careers.
+```{r plot7, fig.height=8.5, fig.width=10.5, echo=FALSE, warning=FALSE}
+plot(Net_Res_Life)              
+``` 
+
+

@@ -1,0 +1,36 @@
+
+
+```{r, echo=FALSE, warning=FALSE}
+library(tibble)
+family_variable <- as_tibble(fam)
+city_variable <- as_tibble(city.name)
+benefits_variable <- as_tibble(ben)
+career_variable <- as_tibble(careerCT)
+career_variable_2 <- as_tibble(careerCT_2)
+sX <- as_tibble(sX) 
+sY <- as_tibble(sY) 
+schooling_months_1X <- as_tibble(schooling_months_1)
+schooling_months_2X <- as_tibble(schooling_months_2)
+```
+
+## For Policymakers  
+  
+The following output is specific to a __`r family_variable$value`__, living in __`r city_variable$value`__. The observed adult works as a __`r career_variable$value`__. In this scenario, the observed adult went to school for __`r sX$value`__ years and __`r schooling_months_1X$value`__ months. This is being compared to the adult working in the career of __`r career_variable_2$value`__, who went to school for __`r sY$value`__ years and __`r schooling_months_2X$value`__ months.  
+
+In this scenario, the single adult and their family receives __`r benefits_variable$value`__.  
+
+  
+  
+
+The charts on this page show how career advancement affects federal and state budgets by increasing taxes and decreasing public assistance. As workers' income increases, they pay more in taxes. These gains can increase government revenue. These workers also receive fewer public assistance programs, which can reduce government spending. The net effect of the gain in taxes and the decline in public assistance spending is referred to as net taxes.
+The chart below shows the expected path of total taxes that result from income increases in the chosen career and county. Note that the dots on the chart show end of year values. Total taxes include the Federal Insurance Contributions Act (FICA) tax, federal income taxes, and state income taxes.  
+
+```{r plot, fig.height=8.5, fig.width=10.5, echo=FALSE, warning=FALSE}
+plot(Total_Tax_Paid)        
+```
+
+The bar chart below show short-term (1-3 years), medium-term (1-5 and 1-10 years) and long-term (lifetime) gains or losses to the government (federal and state) that arise when switching from the near-minimum wage job to the chosen career. The chart shows the difference in net taxes, calculated as taxes received minus public assistance disbursements. 
+
+```{r plot2, fig.height=8.5, fig.width=10.5, echo=FALSE, warning=FALSE}
+plot(Tax_Life)           
+```  
